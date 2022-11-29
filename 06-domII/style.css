@@ -1,0 +1,8 @@
+#divClick{
+    width: max-content;
+    transition: background-color 3s, transform 9s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.animate{
+    transform: translate(500px);
+}
