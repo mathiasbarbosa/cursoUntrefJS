@@ -5,21 +5,50 @@ div.addEventListener("click", () => {
     div.classList.add('animate')
 })
 
-// const dbclick = document.querySelector('#dbClick')
-
-// dbclick.ondbclick = () => {
-//     console.log("No es asi");
-// }
-
-// dbclick.addEventListener('dbclick', () => {
-//     console.log("tampoco es asi");
-// })
 
 const mouseover = document.querySelector('#mouseover')
 
 mouseover.addEventListener('mouseover', () => {
-    console.log("esta pasando algo");
+    mouseover.style.backgroundColor = 'blue'
+    mouseover.classList.toggle('animate')
 })
+
+const mouseout = document.querySelector('#mouseout')
+mouseout.addEventListener('mouseout', () => {
+    mouseout.style.backgroundColor = 'tomato'
+    mouseout.classList.toggle('animate')
+})
+
+const mousedown  = document.querySelector('#mousedown')
+mousedown.addEventListener('mousedown', () => {
+    mousedown.style.backgroundColor = 'pink'
+    mousedown.classList.toggle('animate')
+})
+
+const mouseup   = document.querySelector('#mouseup')
+mouseup.addEventListener('mouseup', () => {
+    mouseup.style.backgroundColor = 'yellow'
+    mouseup .classList.toggle('animate')
+})
+
+const keypress    = document.querySelector('#keypress')
+const containerKeypres = document.querySelector('#container-keypress')
+keypress.addEventListener('keypress', (e) => {
+   containerKeypres.innerHTML = e.target.value
+})
+
+const keydown    = document.querySelector('#keydown')
+const containerKeydown = document.querySelector('#container-keydown')
+keydown.addEventListener('keydown', (e) => {
+    containerKeydown.innerHTML = e.target.value
+})
+
+const keyup    = document.querySelector('#keyup')
+const containerKeyup = document.querySelector('#container-keyup')
+keyup.addEventListener('keyup', (e) => {
+    containerKeyup.innerHTML = e.target.value
+})
+
 
 
 const formulario = document.querySelector('#formulario')
