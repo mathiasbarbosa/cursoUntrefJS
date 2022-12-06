@@ -1,4 +1,31 @@
-.error{
+/* .error{
     border: solid 2px red;
     color: red;
+} */
+
+
+#comidas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.cardProduct{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 30%;
+    border: 1px solid red;
+    margin: 10px;
+}
+
+button{
+    width: 30%;
 }
