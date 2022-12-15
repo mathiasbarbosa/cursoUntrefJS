@@ -1,5 +1,23 @@
 const form = document.querySelector('#form')
 
+const post = async (data) => {
+    let response = await fetch('https://jsonplaceholder.typicode.com/posts',{
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+    if (response.status === 201) {
+        console.log(response);
+        let nuevoUsuario = await response.json()
+        console.log(nuevoUsuario);    
+    }else{
+        alert('tira un error')
+    }
+    
+}
+
 form.addEventListener("submit", (evento) => {
     evento.preventDefault()
     console.dir(evento.target);
@@ -25,7 +43,12 @@ form.addEventListener("submit", (evento) => {
     }
 
     if ((nombre != '') && (direccion != '')) {
-        alert('datos enviados correctamente')
+        let usuario = {
+            nombre: nombre,
+            direccion: direccion
+        }
+
+        post(usuario)
         form.reset()
     }
 })
